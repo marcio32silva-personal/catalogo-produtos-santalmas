@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santalmas - Catálogo de Produtos</title>
+  <style>
+    :root{--bg:#f5f7fb;--panel:#fff;--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--dark:#020617;--blue:#2563eb;--blue-bg:#eff6ff;--shadow:0 18px 45px rgba(15,23,42,.08);--shadow-soft:0 8px 24px rgba(15,23,42,.06);--radius:24px}*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,rgba(37,99,235,.12),transparent 34%),radial-gradient(circle at top right,rgba(16,185,129,.10),transparent 30%),var(--bg);color:var(--ink)}.app{width:min(1180px,100%);margin:0 auto;padding:18px}header{background:rgba(255,255,255,.92);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:28px;padding:18px;margin-bottom:16px;display:grid;gap:16px}.brand{display:flex;gap:14px;align-items:center}.logo{width:62px;height:62px;border-radius:20px;background:var(--dark);color:white;display:grid;place-items:center;font-weight:950;font-size:28px;box-shadow:var(--shadow-soft)}h1{margin:0;font-size:clamp(24px,5vw,42px);letter-spacing:-.05em;line-height:.95;font-weight:950}.subtitle{margin:7px 0 0;color:var(--muted);font-size:13px;font-weight:750;line-height:1.35}.search-area{display:grid;grid-template-columns:1fr auto;gap:10px}input,select,button,textarea{font-family:inherit}.search-input{border:1px solid #cbd5e1;background:white;color:var(--ink);border-radius:18px;padding:16px;font-size:16px;font-weight:800;outline:none;min-width:0;box-shadow:0 6px 18px rgba(15,23,42,.04)}.search-input:focus{border-color:var(--dark);box-shadow:0 0 0 4px rgba(15,23,42,.08)}.primary{border:0;background:var(--dark);color:white;border-radius:18px;padding:0 18px;font-size:12px;font-weight:950;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;min-height:54px;transition:.18s ease}.primary:hover{transform:translateY(-1px);background:#000}.filters{display:flex;gap:8px;flex-wrap:wrap}.chip{border:1px solid var(--line);background:white;color:var(--muted);border-radius:999px;padding:9px 12px;font-size:11px;font-weight:950;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;transition:.16s ease}.chip:hover,.chip.active{background:var(--dark);color:white;border-color:var(--dark)}.status-row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:12px 2px 14px;color:var(--muted);font-size:12px;font-weight:850}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:rgba(255,255,255,.94);border:1px solid var(--line);box-shadow:var(--shadow-soft);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;min-height:100%}.photo{aspect-ratio:4/3;background:linear-gradient(135deg,#e2e8f0,#f8fafc);display:grid;place-items:center;color:var(--muted);font-size:12px;font-weight:950;text-transform:uppercase;letter-spacing:.08em;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;display:block;cursor:pointer}.content{padding:15px;display:grid;gap:10px;flex:1}.code{display:inline-flex;width:fit-content;align-items:center;gap:7px;background:var(--blue-bg);color:#1d4ed8;border:1px solid #bfdbfe;border-radius:999px;padding:7px 11px;font-size:12px;font-weight:950;letter-spacing:.08em;text-transform:uppercase}.name{font-size:18px;line-height:1.08;font-weight:950;letter-spacing:-.03em;margin:0}.popular{color:var(--muted);font-size:13px;font-weight:800;line-height:1.35}.desc{color:var(--ink);font-size:13px;line-height:1.38;font-weight:650}.tags{display:flex;flex-wrap:wrap;gap:6px}.tag{background:#f8fafc;border:1px solid var(--line);border-radius:999px;padding:5px 8px;color:var(--muted);font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.04em}.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto}.btn{border:1px solid var(--line);background:white;color:var(--ink);border-radius:14px;padding:11px 10px;font-size:11px;font-weight:950;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;transition:.16s ease}.btn:hover{transform:translateY(-1px);background:#f8fafc}.btn.dark{background:var(--dark);color:white;border-color:var(--dark)}.empty{background:white;border:1px solid var(--line);box-shadow:var(--shadow-soft);border-radius:var(--radius);padding:48px 18px;text-align:center;color:var(--muted);font-weight:850;grid-column:1/-1}.admin{margin-top:16px;background:rgba(255,255,255,.94);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:28px;padding:18px}.admin summary{cursor:pointer;font-size:14px;font-weight:950;text-transform:uppercase;letter-spacing:.06em}.form{margin-top:14px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:10px}.field{display:flex;flex-direction:column;gap:6px}.field label{color:var(--muted);font-size:10px;font-weight:950;text-transform:uppercase;letter-spacing:.08em;padding-left:3px}.field input,.field textarea{border:1px solid #cbd5e1;border-radius:14px;padding:12px;font-size:13px;font-weight:750;outline:none}textarea{resize:vertical;min-height:80px}.col-2{grid-column:span 2}.col-4{grid-column:span 4}.col-6{grid-column:span 6}.col-12{grid-column:span 12}.toast{position:fixed;right:16px;bottom:16px;background:var(--dark);color:white;padding:13px 15px;border-radius:16px;font-size:13px;font-weight:850;box-shadow:var(--shadow);transform:translateY(20px);opacity:0;pointer-events:none;transition:.2s ease;z-index:200;max-width:min(420px,calc(100vw - 32px))}.toast.show{opacity:1;transform:translateY(0)}.modal{position:fixed;inset:0;background:rgba(15,23,42,.68);display:none;place-items:center;padding:18px;z-index:100}.modal.open{display:grid}.modal-box{width:min(900px,100%);background:white;border-radius:26px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.30)}.modal-img{width:100%;max-height:80vh;object-fit:contain;background:#f8fafc;display:block}.modal-foot{padding:12px;display:flex;justify-content:space-between;gap:10px;align-items:center}@media(max-width:920px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:640px){.app{padding:12px}header{border-radius:22px;padding:14px}.brand{align-items:flex-start}.logo{width:52px;height:52px;border-radius:17px}.search-area{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.form{grid-template-columns:1fr}.col-2,.col-4,.col-6,.col-12{grid-column:span 1}.actions{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brand"><div><h1>Catálogo de Produtos Santalmas</h1></div></div>
+      <div class="search-area"><input id="busca" class="search-input" placeholder="Ex: tela de polipropileno, pp1515, cabo, motor..." oninput="render()" autofocus><button class="primary" onclick="limparBusca()">Limpar</button></div>
+      
+    </header>
+    <div class="status-row"><span id="contador">0 produtos encontrados</span><span>Catálogo online via Google Sheets</span></div>
+    <main class="grid" id="resultado"></main>
+</div>
+  <div class="modal" id="modal" onclick="fecharModal()"><div class="modal-box" onclick="event.stopPropagation()"><img id="modalImg" class="modal-img" alt="Produto ampliado"><div class="modal-foot"><strong id="modalTitle"></strong><button class="btn dark" onclick="fecharModal()">Fechar</button></div></div></div>
+  <div class="toast" id="toast"></div>
+  <script>
+    let categoriaAtiva="Todas";
+    let produtos=[
+      {id:1,codigo:"PP1515",nomeTecnico:"Tela PP1515",nomePopular:"Tela de polipropileno",categoria:"Telas",descricao:"Tela de polipropileno. Use este código quando o representante pedir tela de polipropileno.",palavrasChave:"tela, polipropileno, pp, pp1515, malha, tela pp",fotoUrl:"https://placehold.co/900x650/f8fafc/0f172a?text=Tela+PP1515"},
+      {id:2,codigo:"CB-ENERGIA",nomeTecnico:"Cabo de Energia",nomePopular:"Cabo de força",categoria:"Acessórios",descricao:"Cabo de energia para equipamentos. Conferir padrão antes do envio.",palavrasChave:"cabo, energia, força, tomada, equipamento",fotoUrl:"https://placehold.co/900x650/f8fafc/0f172a?text=Cabo+de+Energia"},
+      {id:3,codigo:"MOTOR-DRILL",nomeTecnico:"Motor Drill",nomePopular:"Motor do drill",categoria:"Equipamentos",descricao:"Motor Drill usado em procedimentos. Confirmar serial quando possível.",palavrasChave:"motor, drill, equipamento, caneta, ortopedia",fotoUrl:"https://placehold.co/900x650/f8fafc/0f172a?text=Motor+Drill"}
+    ];
+    const $=id=>document.getElementById(id);
+    function normalizarTexto(txt){return String(txt||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")}
+    function scoreProduto(p,termo){if(!termo)return 1;const b=normalizarTexto(termo);const c={codigo:normalizarTexto(p.codigo),nomePopular:normalizarTexto(p.nomePopular),nomeTecnico:normalizarTexto(p.nomeTecnico),categoria:normalizarTexto(p.categoria),palavrasChave:normalizarTexto(p.palavrasChave),descricao:normalizarTexto(p.descricao)};let s=0;if(c.codigo===b)s+=100;if(c.codigo.includes(b))s+=60;if(c.nomePopular.includes(b))s+=50;if(c.nomeTecnico.includes(b))s+=40;if(c.palavrasChave.includes(b))s+=35;if(c.categoria.includes(b))s+=15;if(c.descricao.includes(b))s+=10;b.split(" ").filter(Boolean).forEach(w=>{if(c.nomePopular.includes(w))s+=12;if(c.nomeTecnico.includes(w))s+=10;if(c.palavrasChave.includes(w))s+=8});return s}
+    function getProdutosFiltrados(){const termo=$("busca").value.trim();return produtos.map(p=>({...p,score:scoreProduto(p,termo)})).filter(p=>{if(categoriaAtiva!=="Todas"&&p.categoria!==categoriaAtiva)return false;if(!termo)return true;return p.score>0}).sort((a,b)=>b.score-a.score||a.nomePopular.localeCompare(b.nomePopular))}
+    function renderFiltros(){const categorias=["Todas",...new Set(produtos.map(p=>p.categoria).filter(Boolean))];$("filtros").innerHTML=categorias.map(cat=>`<button class="chip ${categoriaAtiva===cat?"active":""}" onclick="setCategoria('${escapeJS(cat)}')">${escapeHTML(cat)}</button>`).join("")}
+    function setCategoria(cat){categoriaAtiva=cat;render()}
+    function render(){renderFiltros();const lista=getProdutosFiltrados();$("contador").textContent=`${lista.length} produto${lista.length===1?"":"s"} encontrado${lista.length===1?"":"s"}`;if(!lista.length){$("resultado").innerHTML=`<div class="empty">Nenhum produto encontrado. Talvez ele tenha três nomes diferentes e nenhum deles esteja cadastrado, que surpresa corporativa.</div>`;return}$("resultado").innerHTML=lista.map(p=>`<article class="card"><div class="photo">${p.fotoUrl?`<img src="${escapeHTML(p.fotoUrl)}" alt="${escapeHTML(p.nomePopular)}" onclick="abrirImagem('${escapeJS(p.fotoUrl)}','${escapeJS(p.nomePopular)} - ${escapeJS(p.codigo)}')" onerror="this.parentElement.innerHTML='Sem foto'">`:"Sem foto"}</div><div class="content"><span class="code">${escapeHTML(p.codigo)}</span><h2 class="name">${escapeHTML(p.nomeTecnico)}</h2><div class="popular">Conhecido como: <strong>${escapeHTML(p.nomePopular)}</strong></div><div class="desc">${escapeHTML(p.descricao||"Sem descrição cadastrada.")}</div><div class="tags"><span class="tag">${escapeHTML(p.categoria||"Sem categoria")}</span>${String(p.palavrasChave||"").split(",").slice(0,4).map(t=>`<span class="tag">${escapeHTML(t.trim())}</span>`).join("")}</div><div class="actions"><button class="btn dark" onclick="copiar('${escapeJS(p.codigo)}')">Copiar código</button><button class="btn" onclick="copiarPedido('${escapeJS(p.codigo)}','${escapeJS(p.nomePopular)}')">Copiar pedido</button></div></div></article>`).join("")}
+    function limparBusca(){$("busca").value="";categoriaAtiva="Todas";render();$("busca").focus()}
+    function copiar(texto){navigator.clipboard.writeText(texto).then(()=>toast(`Código copiado: ${texto}`)).catch(()=>alert("Código: "+texto))}
+    function copiarPedido(codigo,nome){const texto=`Produto: ${nome}\nCódigo: ${codigo}`;navigator.clipboard.writeText(texto).then(()=>toast("Pedido copiado.")).catch(()=>alert(texto))}
+    function adicionarProduto(){const p={id:Date.now(),codigo:$("codigo").value.trim().toUpperCase(),nomeTecnico:$("nomeTecnico").value.trim(),nomePopular:$("nomePopular").value.trim(),categoria:$("categoria").value.trim()||"Sem categoria",descricao:$("descricao").value.trim(),palavrasChave:$("palavrasChave").value.trim(),fotoUrl:$("fotoUrl").value.trim()};if(!p.codigo||!p.nomePopular){alert("Preencha pelo menos código e nome popular.");return}produtos.push(p);["codigo","nomeTecnico","nomePopular","categoria","descricao","palavrasChave","fotoUrl"].forEach(id=>$(id).value="");categoriaAtiva="Todas";render();toast("Produto adicionado no esboço local. Ainda não está salvando no Google Sheets.")}
+    function abrirImagem(src,title){$("modalImg").src=src;$("modalTitle").textContent=title;$("modal").classList.add("open")}
+    function fecharModal(){$("modal").classList.remove("open")}
+    function toast(msg){const el=$("toast");el.textContent=msg;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),2600)}
+    function escapeHTML(v){return String(v??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;")}
+    function escapeJS(v){return String(v??"").replaceAll("\\","\\\\").replaceAll("'","\\'").replaceAll('"','\\"').replaceAll("\n","\\n").replaceAll("\r","")}
+    async function carregarProdutos() {
+      try {
+        carregando = true;
+        $("contador").textContent = "Carregando produtos...";
+        $("resultado").innerHTML = `<div class="empty">Carregando catálogo online...</div>`;
+
+        const res = await fetch(API_URL + "?t=" + Date.now());
+        const json = await res.json();
+
+        if (!json.success) {
+          throw new Error(json.error || "Erro ao carregar produtos");
+        }
+
+        produtos = normalizarProdutos(json.produtos || []);
+        render();
+
+      } catch (err) {
+        console.error(err);
+        $("contador").textContent = "Erro ao carregar produtos";
+        $("resultado").innerHTML = `<div class="empty">Não consegui carregar o catálogo. Verifique se o Apps Script foi publicado para "Qualquer pessoa".</div>`;
+      } finally {
+        carregando = false;
+      }
+    }
+
+    function normalizarProdutos(lista) {
+      return (Array.isArray(lista) ? lista : [])
+        .map((p, index) => ({
+          id: p.id || index + 1,
+          codigo: p.codigo || "",
+          nomeTecnico: p.nomeTecnico || p.descricao || p["Descricao produto"] || "",
+          nomePopular: p.nomePopular || p.descricao || p["Descricao produto"] || "",
+          categoria: p.categoria || "",
+          descricao: p.descricao || p["Descricao produto"] || "",
+          palavrasChave: p.palavrasChave || `${p.codigo || ""} ${p.descricao || ""} ${p["Descricao produto"] || ""}`,
+          fotoUrl: p.fotoUrl || "",
+          ativo: String(p.ativo || "Sim").toLowerCase()
+        }))
+        .filter(p => p.codigo && p.ativo !== "não" && p.ativo !== "nao" && p.ativo !== "false");
+    }
+
+    carregarProdutos();
+  </script>
+</body>
+</html>
